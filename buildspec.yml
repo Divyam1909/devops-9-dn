@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo Installing...
+      - echo Installing dependencies (none)
   build:
     commands:
       - echo Build started
@@ -13,4 +13,5 @@ phases:
 
 artifacts:
   files:
-    - '**/*'
+    - '**/*'          # Include everything
+  discard-paths: yes   # ✅ This flattens folder structure so files go to root of S3
