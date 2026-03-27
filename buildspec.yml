@@ -10,8 +10,10 @@ phases:
   post_build:
     commands:
       - echo Build completed
+      - cp devops-9-codebuild/index.html ./index.html   # copy to root
+      - cp -r devops-9-codebuild/* ./                 # optional for all files
 
 artifacts:
   files:
-    - '**/*'
+    - 'index.html'   # only include index.html (or '*')
   discard-paths: yes
